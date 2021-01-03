@@ -48,13 +48,34 @@ ul li a {
     display: flex;
 }
 
+.hamburger{
+    position: absolute;
+    top: 4px;
+    right: 32px;
+    color: var(--font-color);
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
-        
     }
 
     .navbar__menu {
         flex-direction: column;
+        display: none;
+    }
+
+    .navbar__icons {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
     }
 }
